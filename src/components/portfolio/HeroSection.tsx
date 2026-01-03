@@ -91,7 +91,7 @@ const HeroSection = () => {
               
               <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground rounded-lg shadow-lg px-4 py-3">
                 <p className="text-xs opacity-80">Year</p>
-                <p className="text-sm font-semibold">2024</p>
+                <p className="text-sm font-semibold">2025</p>
               </div>
             </div>
           </div>
