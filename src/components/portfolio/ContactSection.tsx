@@ -77,13 +77,13 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Info */}
-          <div className="px-0 mx-0">
-            <h3 className="text-xl font-semibold text-foreground mb-6 mx-0 px-0 text-right">
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
               Contact Information
             </h3>
 
             <div className="space-y-4 mb-8">
-              {contactInfo.map((info, index) => <div key={index} className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border">
+              {contactInfo.map((info, index) => <div key={index} className="p-4 rounded-xl bg-card border border-border flex items-start justify-start gap-[18px]">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                     <info.icon className="w-5 h-5 text-primary" />
                   </div>
@@ -109,7 +109,7 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="bg-card rounded-2xl p-8 border border-border">
-            <h3 className="text-xl font-semibold text-foreground mb-6">
+            <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
               Send a Message
             </h3>
 
