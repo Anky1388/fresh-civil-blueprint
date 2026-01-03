@@ -77,8 +77,8 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-semibold text-foreground mb-6">
+          <div className="px-0 mx-0">
+            <h3 className="text-xl font-semibold text-foreground mb-6 mx-0 px-0 text-right">
               Contact Information
             </h3>
 
@@ -108,7 +108,49 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          
+          <div className="bg-card rounded-2xl p-8 border border-border">
+            <h3 className="text-xl font-semibold text-foreground mb-6">
+              Send a Message
+            </h3>
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    Full Name
+                  </label>
+                  <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    Email Address
+                  </label>
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="your@email.com" required />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                  Subject
+                </label>
+                <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="What's this about?" required />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  Message
+                </label>
+                <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Your message..." rows={5} required />
+              </div>
+
+              <Button type="submit" className="w-full gap-2" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : <>
+                    <Send className="w-4 h-4" />
+                    Send Message
+                  </>}
+              </Button>
+            </form>
+          </div>
         </div>
       </div>
     </section>;
