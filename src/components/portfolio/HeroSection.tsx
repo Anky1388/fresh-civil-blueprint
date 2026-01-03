@@ -32,7 +32,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center shadow-md opacity-90">
           {/* Text Content */}
-          <div className="text-center lg:text-left animate-slide-up rounded-2xl shadow-inner opacity-95 border-2">
+          <div className="text-center lg:text-left animate-slide-up rounded-2xl shadow-inner opacity-95 border-2 px-[10px]">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               Open to Opportunities
