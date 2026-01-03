@@ -25,7 +25,7 @@ const HeroSection = () => {
         <div className="absolute bottom-32 right-20 w-48 h-48 border border-accent/20 rotate-45" />
         <div className="absolute top-1/3 right-10 w-24 h-24 border-2 border-primary/10" />
         <svg className="absolute bottom-0 left-0 w-full h-32 text-primary/5" viewBox="0 0 1200 100" preserveAspectRatio="none">
-          <path d="M0,50 L100,30 L200,50 L300,20 L400,60 L500,30 L600,50 L700,20 L800,60 L900,30 L1000,50 L1100,20 L1200,50 L1200,100 L0,100 Z" fill="currentColor" />
+          <path d="M0,50 L100,30 L200,50 L300,20 L400,60 L500,30 L600,50 L700,20 L800,60 L900,30 L1000,50 L1100,20 L1200,50 L1200,100 L0,100 Z" fill="currentColor" className="rounded-none" />
         </svg>
       </div>
 
