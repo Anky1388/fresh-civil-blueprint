@@ -42,18 +42,18 @@ const ContactSection = () => {
   const contactInfo = [{
     icon: Mail,
     label: "Email",
-    value: "rakeshkushwaha7139@gmail.com",
-    href: "mailto:rakeshkushwaha7139@gmail.com"
+    value: "arjun.verma.ce@example.com",
+    href: "mailto:arjun.verma.ce@example.com"
   }, {
     icon: Phone,
     label: "Phone",
-    value: "81770 97139",
-    href: "tel:+918177097139"
+    value: "+91-9XXXXXXXXX",
+    href: "tel:+919XXXXXXXXX"
   }, {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/rakesh-kushwaha7139",
-    href: "https://www.linkedin.com/in/rakesh-kushwaha7139"
+    value: "linkedin.com/in/arjun-verma-ce",
+    href: "https://linkedin.com/in/arjun-verma-ce"
   }, {
     icon: MapPin,
     label: "Location",
@@ -108,49 +108,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card rounded-2xl p-8 border border-border">
-            <h3 className="text-xl font-semibold text-foreground mb-6">
-              Send a Message
-            </h3>
-
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Full Name
-                  </label>
-                  <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email Address
-                  </label>
-                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="your@email.com" required />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                  Subject
-                </label>
-                <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="What's this about?" required />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Message
-                </label>
-                <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Your message..." rows={5} required />
-              </div>
-
-              <Button type="submit" className="w-full gap-2" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : <>
-                    <Send className="w-4 h-4" />
-                    Send Message
-                  </>}
-              </Button>
-            </form>
-          </div>
+          
         </div>
       </div>
     </section>;
