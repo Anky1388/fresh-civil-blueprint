@@ -52,7 +52,7 @@ const ContactSection = () => {
   }, {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/arjun-verma-ce",
+    value: "linkedin.com/in/rakesh-kushwaha7139",
     href: "https://linkedin.com/in/arjun-verma-ce"
   }, {
     icon: MapPin,
