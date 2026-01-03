@@ -4,71 +4,63 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-
 const ContactSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: "",
+    message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
+    await new Promise(resolve => setTimeout(resolve, 1000));
     toast({
       title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      description: "Thank you for reaching out. I'll get back to you soon."
     });
-
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    });
     setIsSubmitting(false);
   };
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "arjun.verma.ce@example.com",
-      href: "mailto:arjun.verma.ce@example.com",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91-9XXXXXXXXX",
-      href: "tel:+919XXXXXXXXX",
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      value: "linkedin.com/in/arjun-verma-ce",
-      href: "https://linkedin.com/in/arjun-verma-ce",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "India",
-      href: null,
-    },
-  ];
-
-  return (
-    <section id="contact" className="py-20 md:py-28 bg-background">
+  const contactInfo = [{
+    icon: Mail,
+    label: "Email",
+    value: "arjun.verma.ce@example.com",
+    href: "mailto:arjun.verma.ce@example.com"
+  }, {
+    icon: Phone,
+    label: "Phone",
+    value: "+91-9XXXXXXXXX",
+    href: "tel:+919XXXXXXXXX"
+  }, {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "linkedin.com/in/arjun-verma-ce",
+    href: "https://linkedin.com/in/arjun-verma-ce"
+  }, {
+    icon: MapPin,
+    label: "Location",
+    value: "India",
+    href: null
+  }];
+  return <section id="contact" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-wider mb-3">
@@ -91,31 +83,17 @@ const ContactSection = () => {
             </h3>
 
             <div className="space-y-4 mb-8">
-              {contactInfo.map((info, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border"
-                >
+              {contactInfo.map((info, index) => <div key={index} className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                     <info.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">{info.label}</p>
-                    {info.href ? (
-                      <a
-                        href={info.href}
-                        target={info.href.startsWith("http") ? "_blank" : undefined}
-                        rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="font-medium text-foreground hover:text-primary transition-colors"
-                      >
+                    {info.href ? <a href={info.href} target={info.href.startsWith("http") ? "_blank" : undefined} rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined} className="font-medium text-foreground hover:text-primary transition-colors font-serif text-justify">
                         {info.value}
-                      </a>
-                    ) : (
-                      <p className="font-medium text-foreground">{info.value}</p>
-                    )}
+                      </a> : <p className="font-medium text-foreground">{info.value}</p>}
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="p-6 rounded-xl bg-primary/5 border border-primary/20">
@@ -141,28 +119,13 @@ const ContactSection = () => {
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Full Name
                   </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your name"
-                    required
-                  />
+                  <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email Address
                   </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your@email.com"
-                    required
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="your@email.com" required />
                 </div>
               </div>
 
@@ -170,47 +133,26 @@ const ContactSection = () => {
                 <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                   Subject
                 </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="What's this about?"
-                  required
-                />
+                <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="What's this about?" required />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                   Message
                 </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Your message..."
-                  rows={5}
-                  required
-                />
+                <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Your message..." rows={5} required />
               </div>
 
               <Button type="submit" className="w-full gap-2" disabled={isSubmitting}>
-                {isSubmitting ? (
-                  "Sending..."
-                ) : (
-                  <>
+                {isSubmitting ? "Sending..." : <>
                     <Send className="w-4 h-4" />
                     Send Message
-                  </>
-                )}
+                  </>}
               </Button>
             </form>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
