@@ -89,7 +89,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">{info.label}</p>
-                    {info.href ? <a href={info.href} target={info.href.startsWith("http") ? "_blank" : undefined} rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined} className="font-medium text-foreground hover:text-primary transition-colors font-serif text-justify">
+                    {info.href ? <a href={info.href} target={info.href.startsWith("http") ? "_blank" : undefined} rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined} className="font-medium text-foreground hover:text-primary transition-colors text-justify font-sans">
                         {info.value}
                       </a> : <p className="font-medium text-foreground">{info.value}</p>}
                   </div>
