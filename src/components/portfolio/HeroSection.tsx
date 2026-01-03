@@ -32,7 +32,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center shadow-md opacity-90">
           {/* Text Content */}
-          <div className="text-center lg:text-left animate-slide-up border-4 rounded-2xl">
+          <div className="text-center lg:text-left animate-slide-up rounded-2xl shadow-inner opacity-95 border-2">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               Open to Opportunities
@@ -80,7 +80,7 @@ const HeroSection = () => {
               
               {/* Image container */}
               <div className="relative w-64 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden border-4 border-card shadow-xl">
-                <img src={arjunProfile} alt="Arjun Verma - Fresher Civil Engineer" className="w-full h-full object-center object-fill" />
+                <img alt="Arjun Verma - Fresher Civil Engineer" src="/lovable-uploads/303f2c01-8d8a-4233-a144-dad0d6c9787e.png" className="w-full h-full object-center object-cover" />
               </div>
 
               {/* Floating badges */}
