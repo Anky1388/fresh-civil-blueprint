@@ -1,52 +1,45 @@
 import { ArrowDown, FileDown, FolderOpen, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import arjunProfile from "@/assets/arjun-profile.jpg";
-
 const HeroSection = () => {
   const scrollToProjects = () => {
     const element = document.querySelector("#projects");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center blueprint-grid overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center blueprint-grid overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 border border-primary/20 rounded-full animate-pulse" />
         <div className="absolute bottom-32 right-20 w-48 h-48 border border-accent/20 rotate-45" />
         <div className="absolute top-1/3 right-10 w-24 h-24 border-2 border-primary/10" />
-        <svg
-          className="absolute bottom-0 left-0 w-full h-32 text-primary/5"
-          viewBox="0 0 1200 100"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,50 L100,30 L200,50 L300,20 L400,60 L500,30 L600,50 L700,20 L800,60 L900,30 L1000,50 L1100,20 L1200,50 L1200,100 L0,100 Z"
-            fill="currentColor"
-          />
+        <svg className="absolute bottom-0 left-0 w-full h-32 text-primary/5" viewBox="0 0 1200 100" preserveAspectRatio="none">
+          <path d="M0,50 L100,30 L200,50 L300,20 L400,60 L500,30 L600,50 L700,20 L800,60 L900,30 L1000,50 L1100,20 L1200,50 L1200,100 L0,100 Z" fill="currentColor" />
         </svg>
       </div>
 
       <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center shadow-md opacity-90">
           {/* Text Content */}
-          <div className="text-center lg:text-left animate-slide-up">
+          <div className="text-center lg:text-left animate-slide-up border-4 rounded-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               Open to Opportunities
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4">
-              Arjun Verma
+              Rakesh Kushwaha 
             </h1>
             
             <p className="text-xl md:text-2xl text-primary font-medium mb-4">
@@ -87,11 +80,7 @@ const HeroSection = () => {
               
               {/* Image container */}
               <div className="relative w-64 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden border-4 border-card shadow-xl">
-                <img
-                  src={arjunProfile}
-                  alt="Arjun Verma - Fresher Civil Engineer"
-                  className="w-full h-full object-cover object-center"
-                />
+                <img src={arjunProfile} alt="Arjun Verma - Fresher Civil Engineer" className="w-full h-full object-center object-fill" />
               </div>
 
               {/* Floating badges */}
@@ -110,17 +99,11 @@ const HeroSection = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-          <button
-            onClick={scrollToProjects}
-            className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
-            aria-label="Scroll down"
-          >
+          <button onClick={scrollToProjects} className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors" aria-label="Scroll down">
             <ArrowDown className="w-5 h-5" />
           </button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
