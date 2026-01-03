@@ -100,7 +100,7 @@ const HeroSection = () => {
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
           <button onClick={scrollToProjects} className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors" aria-label="Scroll down">
-            <ArrowDown className="w-5 h-5" />
+            <ArrowDown className="w-5 h-5 shadow-xs opacity-65" />
           </button>
         </div>
       </div>
