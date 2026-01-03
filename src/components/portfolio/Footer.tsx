@@ -1,4 +1,4 @@
-import { Heart, Github } from "lucide-react";
+import { Github } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="py-8 bg-card border-t border-border">
@@ -19,7 +19,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
             <span>Built with</span>
-            <Heart className="w-4 h-4 text-destructive fill-destructive" />
+            
             <span>by Anupam Tiwari </span>
           </div>
         </div>
