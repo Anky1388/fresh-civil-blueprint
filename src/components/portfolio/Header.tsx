@@ -47,9 +47,11 @@ const Header = () => {
           {navLinks.map(link => <button key={link.href} onClick={() => scrollToSection(link.href)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               {link.label}
             </button>)}
-          <Button size="sm" className="gap-2">
-            <FileDown className="w-4 h-4" />
-            Resume
+          <Button size="sm" asChild className="gap-2">
+            <a href="/resume.pdf" download className="inline-flex items-center gap-2">
+              <FileDown className="w-4 h-4" />
+              Resume
+            </a>
           </Button>
         </nav>
 
@@ -65,9 +67,11 @@ const Header = () => {
             {navLinks.map(link => <button key={link.href} onClick={() => scrollToSection(link.href)} className="text-left py-2 text-foreground hover:text-primary transition-colors">
                 {link.label}
               </button>)}
-            <Button className="gap-2 w-full mt-2">
-              <FileDown className="w-4 h-4" />
-              Download Resume
+            <Button asChild className="gap-2 w-full mt-2">
+              <a href="/resume.pdf" download className="inline-flex items-center gap-2 w-full justify-center">
+                <FileDown className="w-4 h-4" />
+                Download Resume
+              </a>
             </Button>
           </nav>
         </div>}

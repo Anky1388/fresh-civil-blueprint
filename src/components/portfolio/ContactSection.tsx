@@ -159,12 +159,13 @@
 
 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Mail, Phone, Linkedin, Send, MapPin, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -183,25 +184,59 @@ const ContactSection = () => {
     }));
   };
 
+  // Configure EmailJS identifiers here (replace with your own)
+  const SERVICE_ID = 'service_da2lbx7';
+  const TEMPLATE_ID = 'template_61euiwk';
+  const PUBLIC_KEY = 'VnOHY3tr4pPBkY-Sf';
+
+  useEffect(() => {
+    try {
+      emailjs.init(PUBLIC_KEY);
+      // eslint-disable-next-line no-console
+      console.debug('EmailJS initialized with public key');
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('Failed to initialize EmailJS', err);
+    }
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // Example: send the form to your API endpoint.
-      // Implement /api/contact on the server to accept and process this request.
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
+      // EmailJS configuration - Replace with your actual IDs from https://www.emailjs.com/
+      // 1. Sign up at https://www.emailjs.com/
+      // 2. Create an email service (Gmail, Outlook, etc.)
+      // 3. Create an email template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}, {{to_email}}
+      // 4. Get your Service ID, Template ID, and Public Key from the dashboard
+      const serviceId = 'service_da2lbx7'; // e.g., 'service_123456'
+      const templateId = 'template_61euiwk'; // e.g., 'template_abcdef'
+      const publicKey = 'VnOHY3tr4pPBkY-Sf'; // e.g., 'abcdefghijklmnop'
 
-      // If you don't have a backend yet, uncomment the simulated delay below
-      // await new Promise(resolve => setTimeout(resolve, 1000));
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'rakeshkushwaha7139@gmail.com' // The recipient email
+      };
 
-      if (!res.ok) {
-        const errorText = await res.text().catch(() => "An error occurred");
-        throw new Error(errorText || "Failed to send message");
+      // Send the email. We initialized EmailJS above so we don't need to pass the public key here.
+      const result = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+
+      // EmailJS returns a status and text; log for debugging
+      // eslint-disable-next-line no-console
+      console.debug('EmailJS send result:', result);
+
+      if (result?.status === 200) {
+        toast({
+          title: 'Message Sent!',
+          description: "Thank you for reaching out. I'll get back to you soon."
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error(`EmailJS responded with status ${result?.status}: ${result?.text}`);
       }
 
       toast({
@@ -209,11 +244,13 @@ const ContactSection = () => {
         description: "Thank you for reaching out. I'll get back to you soon."
       });
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (err: any) {
-      console.error("Contact form submission error:", err);
+    } catch (err: unknown) {
+      // eslint-disable-next-line no-console
+      console.error('Contact form submission error:', err);
+      const errorMessage = err instanceof Error ? err.message : JSON.stringify(err);
       toast({
-        title: "Failed to send",
-        description: err?.message || "Something went wrong. Please try again later."
+        title: 'Failed to send',
+        description: errorMessage || 'Something went wrong. Please try again later.'
       });
     } finally {
       setIsSubmitting(false);
@@ -230,7 +267,7 @@ const ContactSection = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "81770 97139",
+      value: "8177097139",
       href: "tel:+918177097139"
     },
     {

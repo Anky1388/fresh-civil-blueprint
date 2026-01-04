@@ -36,9 +36,11 @@ const CareerObjective = () => {
               <Mail className="w-5 h-5" />
               Contact Me
             </Button>
-            <Button size="lg" variant="secondary" className="gap-2">
-              <FileDown className="w-5 h-5" />
-              Download Resume
+            <Button size="lg" variant="secondary" asChild className="gap-2">
+              <a href="/resume.pdf" download className="inline-flex items-center gap-2">
+                <FileDown className="w-5 h-5" />
+                Download Resume
+              </a>
             </Button>
           </div>
         </div>
