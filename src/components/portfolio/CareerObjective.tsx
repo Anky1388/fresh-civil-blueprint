@@ -28,10 +28,10 @@ const CareerObjective = () => {
           </blockquote>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="gap-2">
+            {/* <Button size="lg" className="gap-2">
               <Briefcase className="w-5 h-5" />
               Apply for Internship
-            </Button>
+            </Button> */}
             <Button size="lg" variant="outline" onClick={scrollToContact} className="gap-2">
               <Mail className="w-5 h-5" />
               Contact Me
