@@ -46,7 +46,7 @@ const HeroSection = () => {
             </p>
             
             <p className="text-lg text-muted-foreground mb-6">
-              Structural Design & BIM Enthusiast
+              Structural Design
             </p>
             
             <p className="text-base text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
