@@ -75,15 +75,15 @@ const ProjectsSection = () => {
                     <h3 className="text-xl font-bold text-foreground mb-1">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    {/* <p className="text-sm text-muted-foreground">
                       {project.subtitle}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
-                <p className="mt-4 text-sm font-medium text-foreground/80 flex items-center gap-2">
+                {/* <p className="mt-4 text-sm font-medium text-foreground/80 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-current" />
                   {project.role}
-                </p>
+                </p> */}
               </div>
 
               {/* Content */}
@@ -97,13 +97,13 @@ const ProjectsSection = () => {
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-2">
+                {/* <div className="flex flex-wrap gap-2">
                   {project.keywords.map((keyword, i) => (
                     <Badge key={i} variant="secondary" className="text-xs font-normal">
                       {keyword}
                     </Badge>
                   ))}
-                </div>
+                </div> */}
               </div>
             </article>
           ))}
