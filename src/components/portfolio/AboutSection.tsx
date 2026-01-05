@@ -47,8 +47,7 @@ const AboutSection = () => {
             <p className="text-muted-foreground leading-relaxed">
               As a final-year/recent graduate in Civil Engineering, I have developed a strong 
               understanding of structural analysis, RCC design, and construction planning. 
-              My coursework and projects have given me practical exposure to tools like 
-              ETABS, AutoCAD, and Revit.
+              My coursework and projects have given me practical exposure to tools like AutoCAD.
             </p>
           </div>
           
@@ -57,8 +56,7 @@ const AboutSection = () => {
             <p className="text-muted-foreground leading-relaxed">
               I am seeking entry-level opportunities where I can apply my academic knowledge, 
               contribute to real-world projects, and grow under the mentorship of experienced 
-              professionals. I am particularly interested in structural design, BIM implementation, 
-              and sustainable construction practices.
+              professionals. I am particularly interested in structural design and sustainable construction practices.
             </p>
           </div>
         </div>

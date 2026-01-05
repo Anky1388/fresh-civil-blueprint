@@ -9,18 +9,18 @@ const CertificationsSection = () => {
       type: "Software Training",
       skills: ["2D Drafting", "Civil Drawings", "Technical Detailing"],
     },
-    // {
-    //   title: "Introduction to ETABS for Building Design",
-    //   provider: "Online Course",
-    //   type: "Structural Analysis",
-    //   skills: ["3D Modeling", "Load Analysis", "Design Verification"],
-    // },
-    // {
-    //   title: "Basics of BIM using Revit",
-    //   provider: "Short-term Training Program",
-    //   type: "BIM Technology",
-    //   skills: ["3D Modeling", "Collaboration", "Documentation"],
-    // },
+    {
+      title: "Leadership and Team Effectiveness",
+      provider: "NPTEL (IIT Kanpur)",
+      type: "Soft Skills / Management Certification",
+      skills: ["Leadership", "Team Management", "Communication Skills", "Decision Making", "Conflict Resolution"],
+    },
+    {
+      title: "Training of Trainers",
+      provider: "NPTEL (IIT Kanpur)",
+      type: "Professional Development / Skill Enhancement Certification",
+      skills: ["Training & Facilitation", "Presentation Skills", "Instructional Design", "Public Speaking", "Evaluation Techniques"],
+    },
   ];
 
   const practicalExposure = [

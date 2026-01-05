@@ -1,6 +1,5 @@
 import { ArrowDown, FileDown, FolderOpen, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import arjunProfile from "@/assets/arjun-profile.jpg";
 const HeroSection = () => {
   const scrollToProjects = () => {
     const element = document.querySelector("#projects");
@@ -52,7 +51,7 @@ const HeroSection = () => {
             
             <p className="text-base text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
               Entry-level civil engineer with strong academic foundations in RCC design, 
-              ETABS, AutoCAD, Revit, and sustainable infrastructure planning. 
+              AutoCAD, and sustainable infrastructure planning. 
               Ready to contribute to innovative engineering projects.
             </p>
 
