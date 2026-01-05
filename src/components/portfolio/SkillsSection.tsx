@@ -7,7 +7,11 @@ const SkillsSection = () => {
       title: "Software & Tools",
       skills: [
         { name: "AutoCAD", description: "2D Drafting & Detailing" },
+        { name: "MS Word", description: "Design Calculations & BOQs" },
         { name: "MS Excel", description: "Design Calculations & BOQs" },
+        { name: "MS Powerpoint", description: "Design Calculations & BOQs" },
+        { name: "MS Office 365", description: "Design Calculations & BOQs" },
+
       ],
     },
     {
@@ -25,6 +29,7 @@ const SkillsSection = () => {
       title: "Codes & Standards",
       skills: [
         { name: "IS 456", description: "Plain & Reinforced Concrete" },
+        { name: "IS 800", description: "Steel Design" },
         { name: "IS 1893", description: "Seismic Design Criteria" },
         { name: "IRC Codes", description: "Road Design Standards" },
       ],

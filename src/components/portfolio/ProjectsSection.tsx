@@ -1,11 +1,13 @@
-import {HousePlus, Route, Mountain, MountainSnow,TrainFrontTunnel , Factory,Waves,ExternalLink } from "lucide-react";
+import { Route, Droplet, Mountain, MountainSnow,TrainFrontTunnel , Factory,Waves,ExternalLink } from "lucide-react";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Icon } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      icon: HousePlus,
+      icon: Droplet,
       title: "Sustainable Low-Rise Housing Layout",
       subtitle: "Rainwater Harvesting Integration",
       role: "Student–Planning & Design Project",
