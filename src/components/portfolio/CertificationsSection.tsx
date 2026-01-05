@@ -9,18 +9,18 @@ const CertificationsSection = () => {
       type: "Software Training",
       skills: ["2D Drafting", "Civil Drawings", "Technical Detailing"],
     },
-    {
-      title: "Introduction to ETABS for Building Design",
-      provider: "Online Course",
-      type: "Structural Analysis",
-      skills: ["3D Modeling", "Load Analysis", "Design Verification"],
-    },
-    {
-      title: "Basics of BIM using Revit",
-      provider: "Short-term Training Program",
-      type: "BIM Technology",
-      skills: ["3D Modeling", "Collaboration", "Documentation"],
-    },
+    // {
+    //   title: "Introduction to ETABS for Building Design",
+    //   provider: "Online Course",
+    //   type: "Structural Analysis",
+    //   skills: ["3D Modeling", "Load Analysis", "Design Verification"],
+    // },
+    // {
+    //   title: "Basics of BIM using Revit",
+    //   provider: "Short-term Training Program",
+    //   type: "BIM Technology",
+    //   skills: ["3D Modeling", "Collaboration", "Documentation"],
+    // },
   ];
 
   const practicalExposure = [

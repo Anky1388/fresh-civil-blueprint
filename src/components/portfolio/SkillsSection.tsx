@@ -6,9 +6,7 @@ const SkillsSection = () => {
       icon: Monitor,
       title: "Software & Tools",
       skills: [
-        { name: "ETABS", description: "Structural Analysis & Design" },
         { name: "AutoCAD", description: "2D Drafting & Detailing" },
-        { name: "Revit", description: "BIM Modeling" },
         { name: "MS Excel", description: "Design Calculations & BOQs" },
       ],
     },
@@ -29,7 +27,6 @@ const SkillsSection = () => {
         { name: "IS 456", description: "Plain & Reinforced Concrete" },
         { name: "IS 1893", description: "Seismic Design Criteria" },
         { name: "IRC Codes", description: "Road Design Standards" },
-        { name: "NBC", description: "National Building Code" },
       ],
     },
     {

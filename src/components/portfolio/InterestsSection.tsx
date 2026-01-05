@@ -30,16 +30,16 @@ const InterestsSection = () => {
       title: "Final Year Project Presentation",
       description: "Presented at college symposium with appreciation from faculty",
     },
-    {
-      icon: Cpu,
-      title: "BIM & Revit Workshop",
-      description: "Active participation in hands-on training workshop",
-    },
-    {
-      icon: Users,
-      title: "Sustainable Building Competition",
-      description: "Volunteered in organizing sustainable model competition",
-    },
+    // {
+    //   icon: Cpu,
+    //   title: "BIM & Revit Workshop",
+    //   description: "Active participation in hands-on training workshop",
+    // },
+    // {
+    //   icon: Users,
+    //   title: "Sustainable Building Competition",
+    //   description: "Volunteered in organizing sustainable model competition",
+    // },
   ];
 
   return (
