@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <span>Built with</span>
+            <span>Built </span>
             
             <span>by Anupam Tiwari </span>
           </div>
